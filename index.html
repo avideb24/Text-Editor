@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+
+    <h1 class="text-5xl text-center font-extrabold my-4 text-red-400">Text Editor</h1>
+
+    <div class="flex justify-center gap-28 text-3xl mt-10">
+        <div class="flex gap-7">
+            <button id="btn-bold"><i class="fa-solid fa-bold"></i></button>
+            <button id="btn-italic"><i class="fa-solid fa-italic"></i></button>
+            <button id="btn-underline"><i class="fa-solid fa-underline"></i></button>
+        </div>
+        <div class="flex gap-7">
+            <button id="left-align"><i class="fa-solid fa-align-left"></i></button>
+            <button id="center-align"><i class="fa-solid fa-align-center"></i></button>
+            <button id="right-align"><i class="fa-solid fa-align-right"></i></button>
+            <button id="justify-align"><i class="fa-solid fa-align-justify"></i></button>
+        </div>
+    </div>
+    <div class="flex justify-center mt-10">
+        <textarea class="border-4 border-solid border-amber-500 resize-none p-10" name="" id="textField" cols="100"
+            rows="10"></textarea>
+    </div>
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+
+        const textContent = document.getElementById('textField');
+
+        document.getElementById('btn-bold').addEventListener('click', function () {
+            textContent.style.fontWeight = 'bold';
+        });
+        document.getElementById('btn-italic').addEventListener('click', function () {
+            textContent.style.fontStyle = 'italic';
+        });
+        document.getElementById('btn-underline').addEventListener('click', function () {
+            textContent.style.textDecoration = 'underline';
+        });
+        document.getElementById('left-align').addEventListener('click', function () {
+            textContent.style.textAlign = 'left';
+        });
+        document.getElementById('right-align').addEventListener('click', function () {
+            textContent.style.textAlign = 'right';
+        });
+        document.getElementById('center-align').addEventListener('click', function () {
+            textContent.style.textAlign = 'center';
+        });
+        document.getElementById('justify-align').addEventListener('click', function () {
+            textContent.style.textAlign = 'justify';
+        });
+
+        
+
+    </script>
+</body>
+
+</html>
