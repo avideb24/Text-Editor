@@ -25,10 +25,23 @@
             <button id="right-align"><i class="fa-solid fa-align-right"></i></button>
             <button id="justify-align"><i class="fa-solid fa-align-justify"></i></button>
         </div>
+        <div class="flex gap-2 text-xl items-center">
+            <p>Set Font Size</p>
+            <select name="" id="select-font-size" class="p-1" onchange="setFontSize()">
+                <option value="12px">12</option>
+                <option value="13px">13</option>
+                <option value="14px">14</option>
+                <option value="15px">15</option>
+                <option value="16px">16</option>
+                <option value="17px">17</option>
+                <option value="18px">18</option>
+                <option value="19px">19</option>
+                <option value="20px">20</option>
+            </select>
+        </div>
     </div>
     <div class="flex justify-center mt-10">
-        <textarea class="border-4 border-solid border-amber-500 resize-none p-10" name="" id="textField" cols="100"
-            rows="10"></textarea>
+        <textarea class="border-4 border-solid border-amber-500 resize-none p-10 w-3/5 h-40" name="" id="textField" ></textarea>
     </div>
 
 
@@ -37,6 +50,7 @@
 
         const textContent = document.getElementById('textField');
 
+        // Font Style
         document.getElementById('btn-bold').addEventListener('click', function () {
             textContent.style.fontWeight = 'bold';
         });
@@ -46,6 +60,8 @@
         document.getElementById('btn-underline').addEventListener('click', function () {
             textContent.style.textDecoration = 'underline';
         });
+
+        // Text Align
         document.getElementById('left-align').addEventListener('click', function () {
             textContent.style.textAlign = 'left';
         });
@@ -59,6 +75,12 @@
             textContent.style.textAlign = 'justify';
         });
 
+        // Font Size
+        function setFontSize() {
+            const fontSize = document.getElementById('select-font-size');
+            const addFontSize = fontSize.value;
+            return textContent.style.fontSize = addFontSize;
+        }
         
 
     </script>
